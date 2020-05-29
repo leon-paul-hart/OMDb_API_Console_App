@@ -13,8 +13,11 @@ namespace OMDb_API_Console_App
             DisplayIntroduction();
 
             string APIKey = GetAPIKey(args.ToString());
-
-            await ApiQuery(APIKey);
+            
+            using (client)
+            {
+                await ApiQuery(APIKey);
+            }
         }
 
         private static void DisplayIntroduction()
@@ -53,7 +56,7 @@ namespace OMDb_API_Console_App
         {
             try
             {
-                Task<string> stringTask = client.GetStringAsync(System.Environment.NewLine + "https://www.omdbapi.com/?i=tt3896198&apikey=" + APIKey.ToString());
+                Task<string> stringTask = client.GetStringAsync(System.Environment.NewLine + "https://www.omdbapi.com/?s=princess&apikey=" + APIKey.ToString());
 
                 string msg = await stringTask;
 
