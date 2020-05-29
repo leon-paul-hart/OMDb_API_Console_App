@@ -46,12 +46,19 @@ namespace OMDb_API_Console_App
 
         private static async Task ProcessRepositories(string APIKey)
         {
-            Task<string> stringTask = client.GetStringAsync(System.Environment.NewLine + "https://www.omdbapi.com/?i=tt3896198&apikey=" + APIKey.ToString());
+            try
+            {
+                Task<string> stringTask = client.GetStringAsync(System.Environment.NewLine + "https://www.omdbapi.com/?i=tt3896198&apikey=" + APIKey.ToString());
 
-            string msg = await stringTask;
+                string msg = await stringTask;
 
-            Console.Clear();
-            Console.Write(msg);
+                Console.Clear();
+                Console.Write(msg);
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
         }
     }
 }
