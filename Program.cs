@@ -10,16 +10,21 @@ namespace OMDb_API_Console_App
 
         static async Task Main(string[] args)
         {
+            DisplayIntroduction();
+
+            string APIKey = GetAPIKey(args.ToString());
+
+            await ApiQuery(APIKey);
+        }
+
+        private static void DisplayIntroduction()
+        {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Welcome to the OMDb (Open Movie Database) API Explorer Console App");
             Console.WriteLine("To use this application you will need a valid API key");
             Console.WriteLine("You can register for an API key for free at https://www.omdbapi.com/apikey.aspx" + System.Environment.NewLine);
             Console.ResetColor();
-
-            string APIKey = GetAPIKey(args.ToString());
-
-            await ApiQuery(APIKey);
         }
 
         private static string GetAPIKey(string APIKey)
@@ -55,9 +60,9 @@ namespace OMDb_API_Console_App
                 Console.Clear();
                 Console.Write(msg);
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
-                throw;
+                Console.WriteLine(ex);
             }
         }
     }
