@@ -19,7 +19,7 @@ namespace OMDb_API_Console_App
 
             string APIKey = GetAPIKey(args.ToString());
 
-            await ProcessRepositories(APIKey);
+            await ApiQuery(APIKey);
         }
 
         private static string GetAPIKey(string APIKey)
@@ -44,7 +44,7 @@ namespace OMDb_API_Console_App
             }
         }
 
-        private static async Task ProcessRepositories(string APIKey)
+        private static async Task ApiQuery(string APIKey)
         {
             try
             {
