@@ -8,8 +8,6 @@ namespace OMDb_API_Console_App
     {
         private static readonly HttpClient client = new HttpClient();
 
-        public string APIKey { get; set; }
-
         static async Task Main(string[] args)
         {
             Console.WriteLine("Welcome to the OMDb (Open Movie Database) API Explorer Console App");
