@@ -1,4 +1,4 @@
-![.NET Core](https://github.com/leon-paul-hart/OMDb_API_Console_App/workflows/.NET%20Core/badge.svg?branch=master)
+![.NET](https://github.com/leon-paul-hart/OMDb_API_Console_App/workflows/.NET/badge.svg)
 
 # OMDb API Console Explorer App
 
