@@ -4,9 +4,11 @@ using System.Threading.Tasks;
 
 namespace OMDb_API_Console_App
 {
-    class Program
+    class MainMenu
     {
         private static readonly HttpClient client = new HttpClient();
+
+        private static ConsoleAlerts alerts = new ConsoleAlerts();
 
         static async Task Main(string[] args)
         {
@@ -23,29 +25,23 @@ namespace OMDb_API_Console_App
         private static void DisplayIntroduction()
         {
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Welcome to the OMDb (Open Movie Database) API Explorer Console App");
-            Console.WriteLine("To use this application you will need a valid API key");
-            Console.WriteLine("You can register for an API key for free at https://www.omdbapi.com/apikey.aspx" + System.Environment.NewLine);
-            Console.ResetColor();
+            alerts.ChangeStringColour("Welcome to the OMDb (Open Movie Database) API Explorer Console App", ConsoleColor.Green);
+            alerts.ChangeStringColour("To use this application you will need a valid API key", ConsoleColor.Green);
+            alerts.ChangeStringColour("You can register for an API key for free at https://www.omdbapi.com/apikey.aspx" + System.Environment.NewLine,  ConsoleColor.Green);
         }
 
         private static string GetAPIKey(string APIKey)
         {
             if (APIKey.Length == 8)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("You are using the API key : " + APIKey);
-                Console.ResetColor();
+                alerts.ChangeStringColour("You are using the API key : " + APIKey, ConsoleColor.Green);
                 return APIKey;
             }
             else
             {
                 while (APIKey.Length != 8)
                 {
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("Please enter a valid OMDb API key");
-                    Console.ResetColor();
+                    alerts.ChangeStringColour("Please enter a valid OMDb API key", ConsoleColor.Yellow);
                     APIKey = Console.ReadLine();
                 }
                 return APIKey;
@@ -61,7 +57,8 @@ namespace OMDb_API_Console_App
                 string msg = await stringTask;
 
                 Console.Clear();
-                Console.Write(msg);
+
+                Console.Write(msg + "\n");
             }
             catch (System.Exception ex)
             {
