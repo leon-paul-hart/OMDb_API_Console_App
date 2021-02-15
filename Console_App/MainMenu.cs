@@ -25,7 +25,7 @@ namespace OMDb_API_Console_App
         private static void DisplayIntroduction()
         {
             Console.Clear();
-            alerts.ChangeStringColour("Welcome to the OMDb (Open Movie Database) API Explorer Console App", ConsoleColor.Green);
+            alerts.ChangeStringColour("Welcome to the (Unofficial) OMDb (Open Movie Database) API Explorer Console App", ConsoleColor.Green);
             alerts.ChangeStringColour("To use this application you will need a valid API key", ConsoleColor.Green);
             alerts.ChangeStringColour("You can register for an API key for free at https://www.omdbapi.com/apikey.aspx" + System.Environment.NewLine,  ConsoleColor.Green);
         }
