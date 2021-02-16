@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Console_App\OMDb_API_Console_App.csproj" />
+    <ProjectReference Include="../OMDb_API_Console_App/OMDb_API_Console_App.csproj" />
   </ItemGroup>
 
 </Project>
