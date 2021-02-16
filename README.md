@@ -1,6 +1,6 @@
-# OMDb API Console Explorer App
+![.NET](https://github.com/leon-paul-hart/OMDb_API_Console_App/workflows/.NET/badge.svg)
 
-![.NET Core](https://github.com/leon-paul-hart/OMDb_API_Console_App/workflows/.NET%20Core/badge.svg?branch=master)
+# OMDb API Console Explorer App
 
 A simple console app for querying the [Open Movie Database](https://www.omdbapi.com/) API and displaying the returned JSON response
 
