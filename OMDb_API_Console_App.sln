@@ -1,21 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMDb_API_Console_App", "Console_App\OMDb_API_Console_App\OMDb_API_Console_App.csproj", "{9115CC8A-F57B-48DB-AA3C-21A16163A60F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMDb_API_Console_App", "Console_App\OMDb_API_Console_App\OMDb_API_Console_App.csproj", "{9115CC8A-F57B-48DB-AA3C-21A16163A60F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMDb_API_Console_App_Tests", "Console_App\OMDb_API_Console_App_Tests\OMDb_API_Console_App_Tests.csproj", "{41A47973-5871-4474-A0A4-3B7C4D088F8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMDb_API_Console_App_Tests", "Console_App\OMDb_API_Console_App_Tests\OMDb_API_Console_App_Tests.csproj", "{41A47973-5871-4474-A0A4-3B7C4D088F8B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClassLibraries", "ClassLibraries", "{A8B40A17-526D-48D4-A07C-9BD34DB370DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Key_Service", "ClassLibraries\API_Key_Service\API_Key_Service.csproj", "{DC789382-FEF3-4AAD-890B-6C06FA93C0C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_Key_Service", "ClassLibraries\API_Key_Service\API_Key_Service.csproj", "{DC789382-FEF3-4AAD-890B-6C06FA93C0C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMDb_API_Service", "ClassLibraries\OMDb_API_Service\OMDb_API_Service.csproj", "{400ECF36-82C5-475B-8DFD-8741E48B53FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMDb_API_Service", "ClassLibraries\OMDb_API_Service\OMDb_API_Service.csproj", "{400ECF36-82C5-475B-8DFD-8741E48B53FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Key_Service_Tests", "ClassLibraries\API_Key_Service_Tests\API_Key_Service_Tests.csproj", "{71437EE0-4D36-4389-BD03-6BB1F0D04399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_Key_Service_Tests", "ClassLibraries\API_Key_Service_Tests\API_Key_Service_Tests.csproj", "{71437EE0-4D36-4389-BD03-6BB1F0D04399}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMDb_API_Service_Tests", "ClassLibraries\OMDb_API_Service_Tests\OMDb_API_Service_Tests.csproj", "{C0370229-D99C-4C0B-8EFB-A24B2FB6AEB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMDb_API_Service_Tests", "ClassLibraries\OMDb_API_Service_Tests\OMDb_API_Service_Tests.csproj", "{C0370229-D99C-4C0B-8EFB-A24B2FB6AEB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleApp", "ConsoleApp", "{B4C72C35-FB36-4A4E-AF8B-5F827F2E87AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,9 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{9115CC8A-F57B-48DB-AA3C-21A16163A60F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -103,10 +102,18 @@ Global
 		{C0370229-D99C-4C0B-8EFB-A24B2FB6AEB3}.Release|x86.ActiveCfg = Release|Any CPU
 		{C0370229-D99C-4C0B-8EFB-A24B2FB6AEB3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{9115CC8A-F57B-48DB-AA3C-21A16163A60F} = {B4C72C35-FB36-4A4E-AF8B-5F827F2E87AB}
+		{41A47973-5871-4474-A0A4-3B7C4D088F8B} = {B4C72C35-FB36-4A4E-AF8B-5F827F2E87AB}
 		{DC789382-FEF3-4AAD-890B-6C06FA93C0C2} = {A8B40A17-526D-48D4-A07C-9BD34DB370DA}
 		{400ECF36-82C5-475B-8DFD-8741E48B53FB} = {A8B40A17-526D-48D4-A07C-9BD34DB370DA}
 		{71437EE0-4D36-4389-BD03-6BB1F0D04399} = {A8B40A17-526D-48D4-A07C-9BD34DB370DA}
 		{C0370229-D99C-4C0B-8EFB-A24B2FB6AEB3} = {A8B40A17-526D-48D4-A07C-9BD34DB370DA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE66AA98-6AEE-4E16-8BA6-F7687994A967}
 	EndGlobalSection
 EndGlobal
