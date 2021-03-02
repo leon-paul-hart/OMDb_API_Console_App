@@ -8,40 +8,29 @@ namespace API_Key_Service_Tests
     public class API_Key_Tests
     {
         [TestMethod]
-        public void APIKeyConstructorCanAssignValue()
+        public void Can_Read_And_Write_API_Key_To_File()
         {
             //Arrange
-            APIKeyManager key = new APIKeyManager("ABC123");
+            APIKeyManager keyManager = new APIKeyManager();
 
             //Act
+            keyManager.SetAPIKey("ABCD1234");
 
             //Assert
-            Assert.AreEqual(key.GetAPIKey(), "ABC123");
+            Assert.AreEqual("ABCD1234", keyManager.GetAPIKey());
         }
 
         [TestMethod]
-        public void GetAPIKey()
+        public void Can_Set_Api_Key_To_File()
         {
             //Arrange
-            APIKeyManager key = new APIKeyManager("GHI789");
+            APIKeyManager keyManager = new APIKeyManager();
 
             //Act
+            keyManager.SetAPIKey("DEFG5678");
 
             //Assert
-            Assert.AreEqual(key.GetAPIKey(), "GHI789");
-        }
-
-        [TestMethod]
-        public void SetApiKey()
-        {
-            //Arrange
-            APIKeyManager key = new APIKeyManager("ABC123");
-
-            //Act
-            key.SetAPIKey("DEF456");
-
-            //Assert
-            Assert.AreEqual(key.GetAPIKey(), "DEF456");
+            Assert.AreEqual("DEFG5678", keyManager.GetAPIKey());
         }
     }
 }
