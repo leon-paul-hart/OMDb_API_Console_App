@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/leon-paul-hart/OMDb_API_Console_App)
+
 ![.NET](https://github.com/leon-paul-hart/OMDb_API_Console_App/workflows/.NET/badge.svg)
 
 # OMDb API Console Explorer App
