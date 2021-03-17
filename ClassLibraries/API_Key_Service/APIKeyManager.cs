@@ -3,7 +3,7 @@ using System;
 
 namespace API_Key_Service.APIKeyManager
 {
-    public class APIKeyManager
+    public class APIKeyManager : IAPI_Key_Service
     {
         #region Properties
         
@@ -33,7 +33,7 @@ namespace API_Key_Service.APIKeyManager
             catch (System.Exception ex) 
             {
                 Console.WriteLine("Error attempting to write API Key to file : " + ex.Message);
-            }            
+            }
         }
 
         public string ReadAPIKeyFromFile(){
