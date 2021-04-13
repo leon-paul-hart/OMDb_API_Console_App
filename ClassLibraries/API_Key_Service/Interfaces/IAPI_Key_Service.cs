@@ -11,5 +11,7 @@ namespace API_Key_Service
         string GetAPIKey();
 
         void SetAPIKey(string key);
+
+        bool ValidateAPIKey(string key);
     }
 }

@@ -52,6 +52,25 @@ namespace API_Key_Service.APIKeyManager
             }
         }
 
+        public bool ValidateAPIKey(string key){
+            try
+            {
+               if (key.Length > 8 || key.Length < 8)
+               {
+                   return false;
+               }
+               else
+               {
+                   return true;
+               }
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Error attempting to validate OMDb API Key : " + ex.Message);
+                throw;
+            }
+        }
+
         #endregion
     }
 }
