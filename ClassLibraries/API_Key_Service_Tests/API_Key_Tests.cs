@@ -1,6 +1,6 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using API_Key_Service;
 
-using API_Key_Service.APIKeyManager;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace API_Key_Service_Tests
 {
@@ -11,37 +11,37 @@ namespace API_Key_Service_Tests
         public void APIKeyConstructorCanAssignValue()
         {
             //Arrange
-            APIKeyManager key = new APIKeyManager("ABC123");
+            APIKeyManager key = new(Key_Value: "ABC123");
 
             //Act
 
             //Assert
-            Assert.AreEqual(key.GetAPIKey(), "ABC123");
+            Assert.AreEqual(expected: key.GetAPIKeyFromCache(), actual: "ABC123");
         }
 
         [TestMethod]
         public void GetAPIKey()
         {
             //Arrange
-            APIKeyManager key = new APIKeyManager("GHI789");
+            APIKeyManager key = new(Key_Value: "GHI789");
 
             //Act
 
             //Assert
-            Assert.AreEqual(key.GetAPIKey(), "GHI789");
+            Assert.AreEqual(expected: key.GetAPIKeyFromCache(), actual: "GHI789");
         }
 
         [TestMethod]
         public void SetApiKey()
         {
             //Arrange
-            APIKeyManager key = new APIKeyManager("ABC123");
+            APIKeyManager key = new(Key_Value: "ABC123");
 
             //Act
-            key.SetAPIKey("DEF456");
+            key.WriteAPIKeyToCache(new_Key_Value: "DEF456");
 
             //Assert
-            Assert.AreEqual(key.GetAPIKey(), "DEF456");
+            Assert.AreEqual(expected: key.GetAPIKeyFromCache(), actual: "DEF456");
         }
     }
 }
